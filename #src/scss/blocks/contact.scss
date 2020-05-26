@@ -1,0 +1,135 @@
+.contact {
+    font-size: 14px;
+    margin: 180px 0px 60px 0px;
+    @media (max-width: $md2+px) {
+        margin: 100px 0px 40px 0px;
+    }
+    @media (max-width: $md3+px) {
+        margin: 60px 0px 30px 0px;
+    }
+    @media (max-width: $md2+px) {
+        margin: 30px 0px 20px 0px;
+    }
+    &__header-block {
+        margin: 0px 0px 120px 0px;
+        @media (max-width: $md2+px) {
+            margin: 0px 0px 80px 0px;
+        }
+        @media (max-width: $md3+px) {
+            margin: 0px 0px 60px 0px;
+        }
+        @media (max-width: $md4+px) {
+            margin: 0px 0px 40px 0px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px -25px;
+        @media (max-width: $md3+px) {
+            margin: 0px auto;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0px 25px;
+        color: #000000;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            flex: none;
+            width: 50%;
+        }
+        @media (max-width: $md3+px) {
+            flex: 0 1 100%;
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    &__form {
+        text-align: right;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 230px;
+        margin: 0px 0px 20px 0px;
+        @media (max-width: $md3+px) {
+            max-width: none;
+            margin: 30px 0px 0px 0px;
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__social {
+        @media (max-width: $md3+px) {
+            justify-content: center;
+        }
+    }
+
+    &__email {
+        font-weight: 700;
+        color: #000000;
+    }
+}
+
+.form-contact {
+    &__body {
+        display: inline-block;
+        width: 100%;
+        max-width: 385px;
+        @media (max-width: $md3+px) {
+            max-width: none;
+        }
+    }
+    &__row {
+        display: flex;
+        margin: 0px -15px 70px -15px;
+        @media (max-width: $md3+px) {
+            margin: 0px -15px 30px -15px;
+        }
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0px 15px;
+    }
+
+    &__label {
+        width: 100%;
+        display: inline-block;
+        font-weight: 700;
+        text-align-last: left;
+        color: #000000;
+        text-transform: uppercase;
+        margin: 0px 0px 10px 0px;
+    }
+    &__btn {
+        margin: 35px 0px 0px 0px;
+    }
+}
+
+.social {
+    display: flex;
+    margin: 0px -10px;
+    picture {
+        height: 15px;
+    }
+
+    &__item {
+        @include flex;
+        width: 29px;
+        height: 29px;
+        border: 2px solid #000000;
+        border-radius: 50%;
+        margin: 0px 10px 10px 10px;
+    }
+}

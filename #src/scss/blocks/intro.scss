@@ -1,0 +1,126 @@
+.intro {
+    flex: 1 1 auto;
+    position: relative;
+    text-align: center;
+    padding: 50px 0px;
+    @include flexbox();
+    @media screen and (max-width: $md2+px), screen and (max-height: 700px) {
+        padding: 20px 0px;
+    }
+    &__content {
+        flex: 1 1 auto;
+        position: relative;
+        z-index: 1;
+        .container {
+            height: 100%;
+            @include flexbox();
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &__text {
+        color: #ffffff;
+        position: relative;
+        padding-bottom: 45px;
+        margin: 30px 0;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 105px;
+            height: 2px;
+            background-color: #ffffff;
+        }
+    }
+    &__title {
+        @include adaptiv-font(34, 25);
+        font-weight: 900;
+        line-height: 40px;
+        text-transform: uppercase;
+        letter-spacing: 5.44px;
+        margin-bottom: 10px;
+        // Формула 160(цифра взята в PS) * 34 /1000 = 5.44
+        @media screen and(max-width:$md3+px), screen and (max-height: 600px) {
+            line-height: 30px;
+        }
+    }
+    &__subtitle {
+        @include adaptiv-font(26, 18);
+        letter-spacing: 4.16px;
+        // Формула 160(цифра взята в PS) * 26 /1000 = 5.44
+    }
+    &__footer {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &__btn {
+        margin-bottom: 70px;
+
+        @media screen and(max-width:$md3+px), screen and (max-height: 600px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__arrow {
+        position: relative;
+        animation: arrow 2s infinite ease;
+    }
+}
+@keyframes arrow {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@-webkit-keyframes arrow {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@-moz-keyframes arrow {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@-o-keyframes arrow {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.intro__btn:hover .intro__btn--w {
+    color: #000000;
+}

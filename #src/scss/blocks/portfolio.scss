@@ -1,0 +1,49 @@
+.portfolio {
+    margin: 0px 0px 60px 0px;
+    text-align: center;
+    &__filter {
+        margin: 50px 0px 50px 0px;
+    }
+    &__items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start; /*Без него плохо отрабатывает*/
+        justify-content: space-between;
+        margin: 0px -15px 45px -15px;
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+    }
+    &__item {
+        flex: 0 1 50%;
+        max-width: 50%; /*Для Internet Explorer 11*/
+        padding: 0px 15px 0px 15px;
+        margin: 0px 0px 20px 0px;
+        @media (max-width: $md4+px) {
+            width: 100%;
+            max-width: none;
+        }
+    }
+    &__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+.control.mixitup-control-active {
+    color: #ada074;
+}
+.control {
+    font-size: 15px;
+    @include font-family;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px 6px;
+    &:hover {
+        color: #ada074;
+    }
+}

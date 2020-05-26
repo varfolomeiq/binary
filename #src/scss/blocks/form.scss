@@ -1,0 +1,50 @@
+.form {
+    &__row {
+        display: flex;
+        margin: 0px -15px;
+    }
+    &__column {
+        padding: 0px 15px;
+    }
+}
+textarea.input {
+    resize: none;
+    padding: 10px 20px;
+    height: 117px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    appearance: none;
+}
+.input {
+    border: none;
+    border-top: 1px solid black;
+    height: 36px;
+    border-radius: 0 !important;
+    width: 100%;
+    display: block;
+    padding: 0px 20px;
+    background-color: #f8f7f7;
+    outline: none;
+    &:hover {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+    &.focus {
+        border-top: 1px solid blue;
+        outline: none;
+    }
+    &.err {
+        border-top: 1px solid red;
+        outline: none;
+    }
+}
+
+textarea.input {
+    resize: none;
+    padding: 0px 0px;
+}
