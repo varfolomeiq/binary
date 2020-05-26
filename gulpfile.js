@@ -55,7 +55,7 @@ function browserSync(params) {
     server: {
       baseDir: "./" + project_folder + "/",
     },
-    browser: ["firefox"],
+    browser: ["chrome"],
     port: 3000,
     notify: false /* Убирает табличку browser-sync обновил страницу*/,
   });
@@ -80,19 +80,19 @@ function css() {
           outputStyle: "expanded",
         })
       )
-      // .pipe(gulp_media())
+      .pipe(gulp_media())
       .pipe(
         autoprefixer({
           overrideBrowserslist: ["last 8 versions"],
           cascade: true,
         })
       )
-      // .pipe(
-      //   webpcss({
-      //     webpClass: ".webp",
-      //     noWebpClass: ".no-webp",
-      //   })
-      // )
+      .pipe(
+        webpcss({
+          webpClass: ".webp",
+          noWebpClass: ".no-webp",
+        })
+      )
       .pipe(dest(path.build.css))
       .pipe(clean_css())
       .pipe(

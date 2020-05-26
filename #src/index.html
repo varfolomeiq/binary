@@ -14,7 +14,7 @@
     <div class="intro">
       <div class="intro__content">
         <div class="container">
-          <a class="logo" href="#"><img height="" src="img/logo.png" alt="logo"></a>
+          <a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
           <div class="intro__text">
             <h3 class="intro__title">Clear, smart, attractive design</h3>
             <h4 class="intro__subtitle">for your app, logo, website</h4>
@@ -146,6 +146,7 @@
                 <a class="portfolio__btn btn btn--b" href="#"><span>Read more</span></a>
               </div>
             </div>
+          </div>
         </section>
         <section class="section">
           <div class="partners">
@@ -175,9 +176,8 @@
                 <h3 class="header-block__title">Contact</h3>
               </div>
               <div class="contact__body">
-
                 <div class="contact__column">
-                  <form class="contact__form form-contact" action="">
+                  <form class="contact__form form-contact" action="/">
                     <div class="form-contact__body">
                       <div class="form-contact__row">
                         <div class="form-contact__column">
@@ -197,10 +197,10 @@
                       </div>
                       <div class="form-contact__input">
                         <label for="message" class="form-contact__label">Message</label>
-                        <textarea autocomplete='off' type='text' name='form[]' data-value=''
+                        <textarea id="message" autocomplete='off' name='form[]' data-value=''
                           class='input req'></textarea>
                       </div>
-                      <button type="submit" class="form-contact__btn btn btn--b" href=""><span>Send</span></button>
+                      <button type="submit" class="form-contact__btn btn btn--b"><span>Send</span></button>
                     </div>
                   </form>
                 </div>
@@ -234,7 +234,7 @@
   <script src="js/libs.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
   <!-- Подключение виджета обратной связи -->
-  <script type="text/javascript" src="https://spikmi.com/Widget?Id=3520"></script>
+  <script src="https://spikmi.com/Widget?Id=3520"></script>
   <script src="js/main.min.js"></script>
 </body>
 
